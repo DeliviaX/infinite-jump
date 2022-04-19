@@ -1,0 +1,6 @@
+local infjump = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+   if infjump then
+       game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+   end
+end)
